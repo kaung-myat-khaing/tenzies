@@ -1,0 +1,100 @@
+:not(.how-to-play) {
+  font-family: "Karla", sans-serif;
+}
+
+.how-to-play {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: #4a4e74;
+  letter-spacing: -0.03rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 30px;
+  background-color: #f5f5f5;
+  width: 320px;
+  height: 320px;
+  padding: 34px;
+  border-radius: 6px;
+}
+main h1 {
+  font-size: 1.6rem;
+  color: #2b283a;
+}
+
+.die-plane {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+
+.held-die {
+  background-color: #59e391;
+}
+
+.roll-dice,
+.new-game {
+  appearance: none;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #5035ff;
+  border: none;
+  padding: 8px 30px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.roll-dice:active,
+.new-game:active {
+  background-color: #472fe4;
+}
+
+.game {
+  width: 320px;
+  height: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  gap: 30px;
+}
+
+.records {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: #2b283a;
+  gap: 30px;
+}
+
+.records > * {
+  width: 100%;
+  border-width: 2px;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+h1[class*=heading] {
+  font-size: 1.2rem;
+}
+
+.current-record--heading {
+  color: #ff0000;
+}
+
+.best-record--heading {
+  color: #008000;
+}
+
+/*# sourceMappingURL=App.css.map */
