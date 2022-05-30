@@ -41,6 +41,16 @@ export default function App() {
 			holdDie={() => holdDie(die.id)}
 		/>
 	));
+	function createUnknownDice() {
+		function createArray(numberOfElements) {
+			let arr = [];
+			for (let i = 0; i < numberOfElements; i++) {
+				arr.push(i);
+			}
+			return arr;
+		}
+		return createArray(10).map(() => <div className="unknown die">?</div>);
+	}
 	function resetStates() {
 		setPlaying(false);
 		setTime(0);
@@ -151,7 +161,9 @@ export default function App() {
 						Roll until all dice are the same. Click each die to freeze it at its
 						current value between rolls.
 					</p>
-					<div className="die-plane">{diceElements}</div>
+					<div className="die-plane">
+						{playing ? diceElements : createUnknownDice()}
+					</div>
 					{!tenzies && !playing && (
 						<button type="button" className="roll-dice" onClick={startGame}>
 							Start game

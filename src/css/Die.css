@@ -11,4 +11,8 @@
   cursor: pointer;
 }
 
+.unknown.die {
+  cursor: default;
+}
+
 /*# sourceMappingURL=Die.css.map */

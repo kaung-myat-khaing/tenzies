@@ -30,6 +30,7 @@ main {
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	gap: 18px;
+	position: relative;
 }
 .held-die {
 	background-color: #59e391;
